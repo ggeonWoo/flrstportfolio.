@@ -108,6 +108,9 @@
   .navbar__menu__item:hover{
     background-color: var(--color-dark-grey);
   }
+
+/*Home*/
+
   #home{
     background: url('./imgs/bakcground.png')center/cover no-repeat;
     padding: 40px;
@@ -158,6 +161,8 @@
     border-radius: 50%;
     margin-bottom: 16px;
   }
+
+/*Skill*/
   #skills{
     background-color: var(--color-yellow);
   }
@@ -207,4 +212,78 @@ padding: 20px 40px;
 .tools, 
 .etc {
   padding: 16px;
+}
+
+/*Work*/
+
+.work__category{
+  margin: 40px;
+}
+
+.category__btn{
+  border: 1px solid var(--color-dark-white);
+  border-radius: var(--size-border-redius);
+  font-size: var(--font-regular);
+  padding: 8px 48px;
+  
+}
+
+.category__btn:hover{
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+
+.category__count{
+  background-color: var(--color-dark-white);
+  border-radius: 50%;
+  color: var(--color-white);
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block;
+  position: relative;
+ left:15px;
+ 
+}
+
+/*Testmonial*/
+#testimonials{
+  background-color: var(--color-light-grey);
+}
+.testimonials{
+  margin: 20px;
+}
+.testimonial{
+  display: flex;
+  margin: 32px 0;
+}
+.testimonial__avatar{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 12px;
+}
+
+.testimonial__avatar:nth-child(odd){
+  margin-right: 40px;
+}
+
+.testimonial__avatar:nth-child(even){
+  margin-left: 40px;
+}
+
+
+.testimonials__speech-bubble{
+  padding: 18px;
+  background-color: var(--color-dark-white);
+  border-radius: var(--size-border-redius);
+}
+
+.testimonials__speech-bubble p{
+  color: var(--color-white);
+}
+
+.testimonials__speech-bubble a{
+  color: var(--color-dark-grey);
 }
