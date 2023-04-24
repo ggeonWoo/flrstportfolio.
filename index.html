@@ -11,10 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/bcb5d41332.js" crossorigin="anonymous"></script>
     <script src="<style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
         </style>
         "></script>
+        
     <script src="./main.js" defer>
     </script>
 </head>
@@ -34,6 +36,12 @@
         <li class="navbar__menu__item">Contact</li>
         
     </ul>
+
+<!--Toggle btn-->
+<button class="navbar__toggle-btn">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
 </nav>
     <!-- Home -->
     <section id="home">
@@ -175,7 +183,8 @@
     </section>
     <!-- Testimonials -->
     <section id="testimonials"class="section">
-        <h1>Testimonials</h1>
+        <div class="section__container">
+            <h1>Testimonials</h1>
         <h3>저를 추천해주신 분들의 말</h3>
         <div class="testimonials">
             <div class="testimonial">
@@ -204,15 +213,17 @@
              src= "./imgs/people1_12942eb352.jpg" 
              alt="people"
               class="testimonial__avatar"/>
+            </div>
         </div>
+    </div>
     </section>
     <!-- Contact -->
     <section id="contact"class="section">
-        <h1>let's talk</h1>
-        <h2>pgw5123@naver.com</h2>
+        <h1 class="contact__title">let's talk</h1>
+        <h2 class="contact__email">pgw5123@naver.com</h2>
         <div class="contact__links">
             <a href="https://github.com/ggeonWoo" target="_blank">
-                <i class=""></i>
+                <i class="fa-brands fa-github"></i>
                 </a>
                 <p class="contact__rigts">2023 first  portfolio.</p>
         </div>
