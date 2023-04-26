@@ -103,7 +103,7 @@
   .navbar__menu{
     display: flex;
     color: var(--color-white);
-    padding: 16px;
+    padding: 6px;
   }
   .navbar__logo{
     font-size: var(--font-regular);
@@ -126,7 +126,7 @@
 
   .navbar__toggle-btn{
   position: absolute;
-  top: 24px;
+  top: 12px;
   right: 32px;
   font-size: 24px;
   color: var(--color-white);

@@ -13,6 +13,9 @@ document.addEventListener('scroll',()=>{
 
 })
 
+
+
+
 //Handle scrolling
 const navbarMenu= document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click',(event)=>{
@@ -33,6 +36,17 @@ homeConTact.addEventListener('click',()=>{
 
   })
   
+//make home 
+const home= document.querySelector('#home');
+const homeHeight=home.getBoundingClientRect().height;
+document.addEventListener('scroll',()=>{
+   home.style.opacity=1-window.scrollY/homeHeight 
+});
+
+
+
+
   function scrollIntoView(selector){
     const scrollTo=document.querySelector(selector);
-    scrollTo.scrollIntoView({behavior:"smooth"})}
+    scrollTo.scrollIntoView({behavior:"smooth"}
+    )}
