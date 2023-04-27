@@ -343,6 +343,27 @@ padding: 20px 40px;
   margin: 24px 0;
 }
 
+/*Scroll*/
+.arrow-up{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  color: var(--color-white);
+  background-color: var(--color-dark-grey);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition:opacity 300ms ease-in;
+}
+
+.arrow-up.visible{
+opacity: 1;
+pointer-events: auto;
+}
+
 @media screen and (max-width:768px) {
   .navbar__toggle-btn{
     display: block;
