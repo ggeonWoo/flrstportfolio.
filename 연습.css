@@ -1,0 +1,12 @@
+.alert_box{
+    background-color: skyblue;
+    padding: 20px;
+    color:white;
+    border-radius: 5px;
+    display: none;
+}
+#out{
+    background-color: none;
+    color: black;
+    display: none;
+}
