@@ -1,11 +1,11 @@
-.alert_box{
+.alert-box{
     background-color: skyblue;
     padding: 20px;
     color:white;
     border-radius: 5px;
     display: none;
 }
-#out{
+#alert{
     background-color: none;
     color: black;
     display: none;
