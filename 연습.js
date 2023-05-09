@@ -7,10 +7,18 @@
 //     document.getElementById('alert').style.display='block';
 //     }
 
-    document.getElementById('open').addEventListener('click',function(){
-        document.getElementById('alert').style.display='block';
-    })
+    // document.getElementById('open').addEventListener('click',function(){
+    //     document.getElementById('alert').style.display='block';
+    // })
 
-    document.getElementById('close').addEventListener('click',function(){
-        document.getElementById('alert').style.display='none';
+    // document.getElementById('close').addEventListener('click',function(){
+    //     document.getElementById('alert').style.display='none';
+    // })
+
+    // $('#login').on('click',function(){
+    //     document.querySelector('.black-bg').classList.add('show-modal')
+    // })
+
+    $('#login').on('click',function(){
+        document.querySelector('.black-bg').classList.add('show-modal')
     })
