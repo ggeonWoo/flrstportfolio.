@@ -60,6 +60,7 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <span class="navbar-brand">Navbar</span>
+          <span class="badge bg-dark">Dark 🔄</span>
           <button class="navbar-toggler" type="button">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -79,11 +80,22 @@
       
       <div class="black-bg">
         <div class="white-bg">
-          <h4>로그인하세요</h4>
-          <button class="btn btn-danger" id="close">닫기</button>
+          <form action="index.html">
+            <div class="my-3">
+              <input type="text" class="form-control" id="email">
+             </div>
+             <div class="my-3">
+               <input type="password" class="form-control"id="pass">
+             </div>
+             <button type="submit" class="btn btn-primary" id="good">전송</button>
+             <button type="button" class="btn btn-danger" id="close">닫기</button>
+          </form> 
         </div>
       </div> 
     <button id="login">로그인</button>
+
+
+    
 
 
 
@@ -105,7 +117,20 @@
        })
    
 
-       
+
+      $('#good').on('click',function(e){
+        if(document.getElementById('email').value==''){
+       alert("비어 있음");
+       e.preventDefault();
+      }else if(document.getElementById('pass').value==''){
+       alert("비번 입력 해주세요.");
+       e.preventDefault();
+      }else if(document.getElementById('email').value.length<6){
+        alert('6자 이상 써주세요.')
+        e.preventDefault();
+      }
+    });
+      
    
     </script>
    
