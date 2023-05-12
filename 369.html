@@ -11,6 +11,25 @@
     <div class id="개론">개론</div>
     <div class id="민법">민법</div>
 
+    <p>태조 이성계가 태어난 년도는?</p>
+    <input type="text" id="answer">
+    <button id="send-answer">제출</button>
+
+        <script>
+            let count=0;
+            $('#send-answer').on('click',function(){
+                count+=1;
+                let 유저답안=document.querySelector('#answer').value;
+                if(유저답안=='1335'){
+                    alert('성공');
+                }else if(count>=3&& 유저답안 !='1335'){
+                    alert('멍청아');
+                }
+            })
+        </script>
+
+
+
     <script src="./369.js"></script>
 </body>
 </html>

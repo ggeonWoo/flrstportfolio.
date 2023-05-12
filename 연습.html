@@ -51,6 +51,8 @@
     
   </head>
   <body>
+  
+    </body>
 
     <script
     src="https://code.jquery.com/jquery-3.6.4.min.js"
@@ -83,9 +85,11 @@
           <form action="index.html">
             <div class="my-3">
               <input type="text" class="form-control" id="email">
+              이메일 입력
              </div>
              <div class="my-3">
                <input type="password" class="form-control"id="pass">
+               비밀번호 입력
              </div>
              <button type="submit" class="btn btn-primary" id="good">전송</button>
              <button type="button" class="btn btn-danger" id="close">닫기</button>
@@ -94,11 +98,32 @@
       </div> 
     <button id="login">로그인</button>
 
-
+      <div class="alert alert-danger">
+        <span id="hi">5</span>
+        초 이내 구매시 사은품 증정!
+      </div>
+    <div style="overflow: hidden;">
+      <div class="slide-container">
+        <div class="slide-box">
+          <img src="./imgs/car1.png">
+        </div>
+        <div class="slide-box">
+          <img src="./imgs/car2.png">
+        </div>
+        <div class="slide-box">
+          <img src="./imgs/car3.png">
+        </div>
+      </div>
+    </div>
+   
+    <button class="slide-1">1</button>
+    <button class="slide-2">2</button>
+    <button class="slide-3">3</button>
+    <button class="next">다음</button>
+    <button class="before">이전</button>
+     
     
-
-
-
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
       
     <script>
@@ -119,9 +144,13 @@
 
 
       $('#good').on('click',function(e){
-        if(document.getElementById('email').value==''){
+       if(document.getElementById('email').value==''){
        alert("비어 있음");
        e.preventDefault();
+      }
+      if(/\S+@\S+.\S+/.test(document.getElementById('email'))){
+        alert('이메일을 확인하세요.')
+        e.preventDefault();
       }else if(document.getElementById('pass').value==''){
        alert("비번 입력 해주세요.");
        e.preventDefault();
@@ -130,9 +159,78 @@
         e.preventDefault();
       }
     });
+
+
+
+    $('form').on('submit',function(e){
+      if( /\S+@\S+\.\S+/.test(document.getElementById('email').value)){
+        alert('이메일을 다시 확인해주세요')
+        e.preventDefault();
+      }
+    });
       
+    // let count = 0;
+    $('.badge').on('click',function(){
+      count++;
+      if(count%2==1){
+        $('.badge').html('light 🔄')
+    }else{
+      $('.badge').html('dark 🔄')
+    }
+  
+    })
+    
+   let num=5;
+
+   setInterval(function(){
+    num--;
+    if(num>=0){
+      document.querySelector('#hi').innerHTML=num;
+    }
+   },1000);
+
+  
+  
+$('.slide-1').on('click',function(){
+  $('.slide-container').css('transform','translateX(-00vw)');
+})
+$('.slide-2').on('click',function(){
+  $('.slide-container').css('transform','translateX(-100vw)');
+})
+$('.slide-3').on('click',function(){
+  $('.slide-container').css('transform','translateX(-200vw)'); 
+})
+
    
+  let 지금사진=1;
+  let add=$('.slide-container')
+
+  $('.next').on('click',function(){
+    if(지금사진==1){
+      add.css('transform','translateX(-100vw)');
+      지금사진++;
+    }else if(지금사진==2){
+      add.css('transform','translateX(-200vw)');
+      지금사진++;
+    }else if(지금사진==3){
+      add.css('transform','translateX(0vw)');
+    }
+  });
+  
+    let 이전사진=3;
+  $('.before').on('click',function(){
+    if(이전사진==3){
+      $('.slide-container').css('transform','translateX(-100vw)');
+      이전사진--;
+    }else if(이전사진==2){
+      $('.slide-container').css('transform','translateX(00vw)');
+      이전사진--;
+    }else if(이전사진==1){
+      $('.slide-container').css('transform','translateX(-200vw)');
+    }
+    })
     </script>
    
   </body>
 </html>
+

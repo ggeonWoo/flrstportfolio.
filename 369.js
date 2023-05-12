@@ -22,3 +22,13 @@ function 합격인가(n,m) {
         console.log('통과입니다.');
     }
 }
+let count=0;
+document.querySelector('#send-answer').addEventListener('click',function(){
+    count+=1;
+    let 유저답안=document.querySelector('#answer').Value;
+    if(유저답안=='1335'){
+        alert('성공');
+    }else if(count>=3&& 유저답안 !='1335'){
+        alert('멍청아');
+    }
+})
